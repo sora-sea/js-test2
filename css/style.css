@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+}
+
+input[type="text"]{
+  width: 160px;
+  height: 20px;
+}
+
+#fizz {
+  margin-left: 7px;
+}
