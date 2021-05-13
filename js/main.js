@@ -19,7 +19,6 @@
     function error() {
       const message = document.createElement('p');
       message.textContent = '整数値を入力してください';
-      const div = document.querySelector('div');
       outputArea.appendChild(message);
     }
 
@@ -27,11 +26,11 @@
       return error();
     }
 
-    if (fizzNum.match(/^-?[0-9]+\.[0-9]+$/) || buzzNum.match(/^-?[0-9]+\.[0-9]+$/)) {
+    if (/^-?[0-9]+\.[0-9]+$/.test(fizzNum) || /^-?[0-9]+\.[0-9]+$/.test(buzzNum)) {
       return error();
     }
 
-    if ((fizzNum == 0) || (buzzNum == 0)) {
+    if ((fizzNum === '') || (buzzNum === '')) {
       return error();
     }
     
@@ -49,7 +48,6 @@
       
       const fizzbuzz = document.createElement('p');
       fizzbuzz.textContent = value;
-      const div = document.querySelector('div')
       outputArea.appendChild(fizzbuzz);
     }
   });
