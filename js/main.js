@@ -43,7 +43,7 @@
       } else if (i % buzzNum === 0) {
         value = 'Buzz' + ' ' + i;
       } else {
-        value = '';
+        continue;
       }
       
       const fizzbuzz = document.createElement('p');
